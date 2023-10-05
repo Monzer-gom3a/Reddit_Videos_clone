@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'widgets/Custom_appBar.dart';
+import 'widgets/Controles_Layer.dart';
+import 'widgets/main_Content_Page.dart';
 
 class reelsPage extends StatefulWidget {
   const reelsPage({super.key});
@@ -15,11 +14,9 @@ class _reelsPageState extends State<reelsPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Custom_App_Bar()
-            ],
+        body: Container(
+          child: Stack(
+            children: [main_content(), Controls()],
           ),
         ),
       ),
